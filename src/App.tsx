@@ -102,6 +102,7 @@ export default function App() {
                 title: "PUBLIC TECHNOLOGIST",
                 company: "MINISTRY OF STATISTICS AND PROGRAM IMPLEMENTATION",
                 description: "BUILD FOR BHARAT FELLOWSHIP 2026 (BHARAT DIGITAL) | DEVELOPER",
+                location: "NEW DELHI",
                 tech: "REACT / NODE / LLM",
                 link: "https://www.bharatdigital.io/fellowship"
               },
@@ -110,6 +111,7 @@ export default function App() {
                 title: "SUMMER INTERN", 
                 company: "OPTUM GLOBAL SOLUTIONS (UNITEDHEALTH GROUP)",
                 description: "TECHNICAL DEVELOPMENT PROGRAM INTERN",
+                location: "HYDERABAD",
                 tech: "FASTAPI / APACHE AIRFLOW / SPRINGBOOT / ORACLE SQL / LLM",
                 link: "https://drive.google.com/file/d/1cM15nzywTWQ-9saDmh9EhcgxadGR26rG/view"
               },
@@ -118,6 +120,7 @@ export default function App() {
                 title: "BACKEND ENGINEER",
                 company: "SMARTSAVAARI PVT LTD",
                 description: "STARTUP ON REDEFINING MOBILITY",
+                location: "REMOTE",
                 tech: "NODE / EXPRESS / MONGOOSE",
                 link: "https://drive.google.com/file/d/1w5jVo_IJasFAqnuif4-wUzjrFhdrzABy/view"
               }
@@ -140,10 +143,13 @@ export default function App() {
                   <h3 className="text-4xl font-black mb-2 group-hover:italic transition-all">
                     {job.title}
                   </h3>
-                  <div className="text-xl font-bold mb-4 opacity-70">
+                  <div className="text-2xl font-bold mb-2 opacity-70">
                     {job.company}
                   </div>
-                  <p className="text-lg font-medium mb-6 leading-tight">
+                  <div className="text-xl font-bold mb-2 opacity-70">
+                    {job.location}
+                  </div>
+                  <p className="text-lg font-medium mb-2 leading-tight">
                     {job.description}
                   </p>
                   <div className="text-sm font-black tracking-widest opacity-50">
