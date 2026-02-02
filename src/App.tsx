@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Github, Linkedin, ExternalLink, ArrowRight, Code, Terminal, Zap } from 'lucide-react'
+import { Github, Linkedin, ExternalLink, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 
 export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
