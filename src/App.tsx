@@ -1,11 +1,9 @@
-'use client'
-
 import { useState, useEffect } from 'react'
-import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Code, Terminal, Zap } from 'lucide-react'
+import { Github, Linkedin, ExternalLink, ArrowRight, Code, Terminal, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 
-export default function BoldDeveloperPortfolio() {
+export default function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -50,16 +48,16 @@ export default function BoldDeveloperPortfolio() {
             <div className="absolute left-8 top-1/2 transform -translate-y-1/2 w-2/5">
               <div className="text-black">
                 <h1 className="text-8xl font-black leading-none mb-4 transform -rotate-2">
-                  ALEX
+                  SARTHAK
                 </h1>
                 <div className="text-2xl font-bold mb-8 transform rotate-1">
-                  SOFTWARE DEVELOPER
+                  SOFTWARE DEVELOPMENT ENGINEER
                 </div>
                 <div className="w-32 h-1 bg-black mb-8"></div>
                 <p className="text-lg font-medium leading-tight">
-                  CRAFTING DIGITAL<br/>
-                  EXPERIENCES THAT<br/>
-                  BREAK BOUNDARIES
+                  MAKING<br/>
+                  LIFE EASIER<br/>
+                  WITH TECHNOLOGY
                 </p>
               </div>
             </div>
@@ -68,16 +66,16 @@ export default function BoldDeveloperPortfolio() {
             <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-2/5 text-right">
               <div className="text-white">
                 <h1 className="text-8xl font-black leading-none mb-4 transform rotate-2">
-                  CHEN
+                  SRIVASTAVA
                 </h1>
                 <div className="text-2xl font-bold mb-8 transform -rotate-1">
                   FULL-STACK DEVELOPER
                 </div>
                 <div className="w-32 h-1 bg-white mb-8 ml-auto"></div>
                 <p className="text-lg font-medium leading-tight">
-                  CODE IS ART<br/>
-                  ART IS CODE<br/>
-                  INNOVATION IS EVERYTHING
+                  CLEAN CODE<br/>
+                  CAFFEINE LOAD<br/>
+                  VICTORY BESTOWED
                 </p>
               </div>
             </div>
@@ -101,29 +99,35 @@ export default function BoldDeveloperPortfolio() {
           <div className="space-y-16">
             {[
               {
-                year: "2022",
-                title: "SENIOR ARCHITECT",
-                company: "TECHCORP SOLUTIONS",
-                description: "LEADING TEAMS. BUILDING SYSTEMS. BREAKING LIMITS.",
-                tech: "REACT / NODE / AWS / POSTGRESQL"
+                year: "Jan 2026 - Present",
+                title: "PUBLIC TECHNOLOGIST",
+                company: "MINISTRY OF STATISTICS AND PROGRAM IMPLEMENTATION",
+                description: "BUILD FOR BHARAT FELLOWSHIP 2026 (BHARAT DIGITAL) | DEVELOPER",
+                tech: "REACT / NODE / LLM",
+                link: "https://www.bharatdigital.io/fellowship"
               },
               {
-                year: "2020",
-                title: "FULL-STACK ENGINEER", 
-                company: "STARTUP DYNAMICS",
-                description: "RAPID PROTOTYPING. SCALABLE SOLUTIONS. ZERO DOWNTIME.",
-                tech: "VUE / PYTHON / DOCKER / MONGODB"
+                year: "JUN 2025 - AUG 2025",
+                title: "SUMMER INTERN", 
+                company: "OPTUM GLOBAL SOLUTIONS (UNITEDHEALTH GROUP)",
+                description: "TECHNICAL DEVELOPMENT PROGRAM INTERN",
+                tech: "FASTAPI / APACHE AIRFLOW / SPRINGBOOT / ORACLE SQL / LLM",
+                link: "https://drive.google.com/file/d/1cM15nzywTWQ-9saDmh9EhcgxadGR26rG/view"
               },
               {
-                year: "2019",
-                title: "SOFTWARE DEVELOPER",
-                company: "DIGITAL AGENCY",
-                description: "CLIENT SOLUTIONS. MODERN PRACTICES. AGILE MINDSET.",
-                tech: "JAVASCRIPT / PHP / MYSQL / WORDPRESS"
+                year: "FEB 2024 - JUL 2024",
+                title: "BACKEND ENGINEER",
+                company: "SMARTSAVAARI PVT LTD",
+                description: "STARTUP ON REDEFINING MOBILITY",
+                tech: "NODE / EXPRESS / MONGOOSE",
+                link: "https://drive.google.com/file/d/1w5jVo_IJasFAqnuif4-wUzjrFhdrzABy/view"
               }
             ].map((job, index) => (
               <div key={index} className="group">
-                <div className="border-4 border-black p-8 transform hover:rotate-1 transition-transform duration-300 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]">
+                <div 
+                  className="border-4 border-black p-8 transform hover:rotate-1 transition-transform duration-300 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
+                  onClick={() => window.open(job.link, '_blank')}
+                >
                   <div className="flex items-start justify-between mb-6">
                     <div className="text-8xl font-black opacity-20 leading-none">
                       {String(index + 1).padStart(2, '0')}
@@ -162,62 +166,74 @@ export default function BoldDeveloperPortfolio() {
           
           <div className="grid grid-cols-12 gap-4 h-screen">
             {/* Project 1 - Large */}
-            <div className="col-span-7 row-span-2 bg-white text-black p-8 flex flex-col justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white">
+            <div 
+              className="col-span-7 row-span-2 bg-white text-black p-8 flex flex-col justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white cursor-pointer"
+              onClick={() => window.open('https://github.com/sarthaksri/Blind-coding-frontend', '_blank')}
+            >
               <div>
                 <div className="text-xs font-black tracking-widest mb-4 opacity-50">01</div>
                 <h3 className="text-4xl font-black mb-4 leading-tight">
-                  E-COMMERCE<br/>REVOLUTION
+                  BLIND CODDING<br/>PLATFORM
                 </h3>
                 <p className="text-lg font-medium mb-6">
-                  FULL-STACK PLATFORM SERVING 100K+ USERS WITH REAL-TIME INVENTORY AND PAYMENT PROCESSING
+                  FULL-STACK PLATFORM FOR A LIVE BLIND CODING PROGRAMMING PLATFORM
                 </p>
               </div>
               <div className="flex justify-between items-end">
                 <div className="text-xs font-black tracking-widest opacity-70">
-                  NEXT.JS / STRIPE / PRISMA
+                  REACT / NODE / EXPRESS / MONGOOSE / DOCKER / NGROK
                 </div>
                 <ExternalLink className="w-6 h-6 group-hover:rotate-45 transition-transform" />
               </div>
             </div>
 
             {/* Project 2 - Medium */}
-            <div className="col-span-5 bg-white text-black p-6 flex flex-col justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white">
+            <div 
+              className="col-span-5 bg-white text-black p-6 flex flex-col justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white cursor-pointer"
+              onClick={() => window.open('https://expenses.sarthaksri.xyz/', '_blank')}
+            >
               <div>
                 <div className="text-xs font-black tracking-widest mb-4 opacity-50">02</div>
                 <h3 className="text-2xl font-black mb-4">
-                  TASK MANAGEMENT SYSTEM
+                  EXPENSE TRACKER
                 </h3>
                 <p className="text-sm font-medium">
-                  COLLABORATIVE WORKSPACE WITH REAL-TIME UPDATES
+                  TRACK YOUR DAILY EXPENSES
                 </p>
               </div>
               <div className="text-xs font-black tracking-widest opacity-70 mt-4">
-                REACT / SOCKET.IO / EXPRESS
+                REACT / EXPRESS / MONGOOSE
               </div>
             </div>
 
             {/* Project 3 - Small */}
-            <div className="col-span-3 bg-white text-black p-6 flex flex-col justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white">
+            <div 
+              className="col-span-3 bg-white text-black p-6 flex flex-col justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white cursor-pointer"
+              onClick={() => window.open('https://github.com/sarthaksri/prelim-event.git', '_blank')}
+            >
               <div>
                 <div className="text-xs font-black tracking-widest mb-4 opacity-50">03</div>
                 <h3 className="text-xl font-black mb-4">
-                  DATA VIZ DASHBOARD
+                  QUIZZING PLATFORM BACKEND
                 </h3>
               </div>
               <div className="text-xs font-black tracking-widest opacity-70">
-                VUE / D3.JS
+                NODE / EXPRESS / MONGOOSE
               </div>
             </div>
 
             {/* Project 4 - Wide */}
-            <div className="col-span-9 bg-white text-black p-6 flex items-center justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white">
+            <div 
+              className="col-span-9 bg-white text-black p-6 flex items-center justify-between group hover:bg-black hover:text-white transition-all duration-500 border-4 border-white cursor-pointer"
+              onClick={() => window.open('https://github.com/sarthaksri/ai-chatbot-framework', '_blank')}
+            >
               <div>
                 <div className="text-xs font-black tracking-widest mb-2 opacity-50">04</div>
                 <h3 className="text-3xl font-black">AI CHATBOT FRAMEWORK</h3>
               </div>
               <div className="text-right">
                 <div className="text-xs font-black tracking-widest opacity-70 mb-2">
-                  PYTHON / TENSORFLOW / FASTAPI
+                  PYTHON / FASTAPI
                 </div>
                 <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
               </div>
@@ -229,12 +245,13 @@ export default function BoldDeveloperPortfolio() {
       {/* Skills Section - Typography Chaos */}
       <section className="py-32 px-8 bg-white text-black">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 gap-16">
+          <h2 className="text-6xl font-black mb-16 transform -rotate-2">
+            SKILLS_
+          </h2>
+          
+          <div className="grid grid-cols-3 gap-12">
+            {/* Column 1 */}
             <div>
-              <h2 className="text-6xl font-black mb-16 transform -rotate-2">
-                SKILLS_
-              </h2>
-              
               <div className="space-y-8">
                 <div className="group">
                   <div className="text-4xl font-black mb-2 group-hover:italic transition-all">FRONTEND</div>
@@ -242,7 +259,7 @@ export default function BoldDeveloperPortfolio() {
                     REACT • VITE • HTML<br/>
                   </div>
                 </div>
-                
+
                 <div className="group">
                   <div className="text-4xl font-black mb-2 group-hover:italic transition-all">BACKEND</div>
                   <div className="text-lg font-medium opacity-70 leading-tight">
@@ -253,7 +270,8 @@ export default function BoldDeveloperPortfolio() {
               </div>
             </div>
             
-            <div className="pt-32">
+            {/* Column 2 */}
+            <div>
               <div className="space-y-8">
                 <div className="group">
                   <div className="text-4xl font-black mb-2 group-hover:italic transition-all">DATABASE</div>
@@ -266,6 +284,19 @@ export default function BoldDeveloperPortfolio() {
                   <div className="text-4xl font-black mb-2 group-hover:italic transition-all">DEVOPS</div>
                   <div className="text-lg font-medium opacity-70 leading-tight">
                     VERCEL • DOCKER<br/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 3 */}
+            <div>
+              <div className="space-y-8">
+                <div className="group">
+                  <div className="text-4xl font-black mb-2 group-hover:italic transition-all">AI</div>
+                  <div className="text-lg font-medium opacity-70 leading-tight">
+                    LLM • PROMPT ENGINEERING • RAG<br/>
+                    
                   </div>
                 </div>
               </div>
@@ -286,6 +317,7 @@ export default function BoldDeveloperPortfolio() {
               variant="outline" 
               size="lg" 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-xl font-black px-8 py-4 transform hover:rotate-2"
+              onClick={() => window.open('https://github.com/sarthaksri', '_blank')}
             >
               <Github className="mr-4 h-6 w-6" />
               GITHUB
@@ -294,14 +326,15 @@ export default function BoldDeveloperPortfolio() {
               variant="outline" 
               size="lg" 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-xl font-black px-8 py-4 transform hover:-rotate-2"
+              onClick={() => window.open('https://www.linkedin.com/in/sarthaksri017/', '_blank')}
             >
-              <Mail className="mr-4 h-6 w-6" />
-              EMAIL
+              <Linkedin className="mr-4 h-6 w-6" />
+              LINKEDIN
             </Button>
           </div>
           
           <div className="text-2xl font-black tracking-widest opacity-50">
-            ALEX.CHEN@EMAIL.COM
+            sarthaksri017@gmail.com
           </div>
         </div>
       </section>
