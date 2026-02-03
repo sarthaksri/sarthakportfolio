@@ -340,8 +340,8 @@ export default function App() {
       {/* Skills Section - Typography Chaos */}
       <section className="py-16 md:pt-16 px-4 md:px-8 bg-black text-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-6xl font-black mb-10 md:mb-16 transform -rotate-2">
-            SKILLS_
+          <h2 className="text-3xl md:text-6xl font-black mb-10 md:mb-16 text-right transform rotate-2">
+            _SKILLS
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
