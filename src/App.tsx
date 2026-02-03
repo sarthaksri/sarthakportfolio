@@ -217,7 +217,7 @@ export default function App() {
               <div>
                 <div className="text-xs font-black tracking-widest mb-4 opacity-50">01</div>
                 <h3 className="text-2xl md:text-4xl font-black mb-4 leading-tight">
-                  BLIND CODDING<br/>PLATFORM
+                  BLIND CODING<br/>PLATFORM
                 </h3>
                 <p className="text-sm md:text-lg font-medium mb-6">
                   FULL-STACK PLATFORM FOR A LIVE BLIND CODING PROGRAMMING PLATFORM
