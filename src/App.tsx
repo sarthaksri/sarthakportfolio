@@ -32,14 +32,7 @@ export default function App() {
         {/* Diagonal background split */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black"></div>
-          {/* Mobile/Tablet: horizontal split */}
-          <div 
-            className="absolute inset-0 bg-white lg:hidden"
-            style={{
-              clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0% 50%)',
-            }}
-          ></div>
-          {/* Desktop: diagonal split */}
+          {/* Desktop only: diagonal split */}
           <div 
             className="hidden lg:block absolute inset-0 bg-white"
             style={{
@@ -51,17 +44,55 @@ export default function App() {
         {/* Content */}
         <div className="relative z-10 min-h-screen flex items-center">
           <div className="w-full px-4 md:px-8">
+            {/* Mobile/Tablet Layout (under 1000px) - Single line name */}
+            <div className="lg:hidden text-center pt-20">
+              {/* Full name in one line */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-none mb-8 mix-blend-difference">
+                SARTHAK SRIVASTAVA
+              </h1>
+              
+              {/* Job titles stacked */}
+              <div className="space-y-6 mb-8">
+                <div className="text-black">
+                  <div className="text-sm sm:text-base md:text-lg font-bold mb-4 transform rotate-1">
+                    SOFTWARE DEVELOPMENT ENGINEER
+                  </div>
+                  <div className="w-20 md:w-28 h-1 bg-black mx-auto mb-4"></div>
+                  <p className="text-sm sm:text-base font-medium leading-tight">
+                    MAKING<br/>
+                    LIFE EASIER<br/>
+                    WITH TECHNOLOGY
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="text-white">
+                  <div className="text-sm sm:text-base md:text-lg font-bold mb-4 transform -rotate-1">
+                    FULL-STACK DEVELOPER
+                  </div>
+                  <div className="w-20 md:w-28 h-1 bg-white mx-auto mb-4"></div>
+                  <p className="text-sm sm:text-base font-medium leading-tight">
+                    CLEAN CODE<br/>
+                    CAFFEINE LOAD<br/>
+                    VICTORY BESTOWED
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Layout (1000px+) - Original diagonal split design */}
             {/* Left side - Black text on white */}
-            <div className="relative lg:absolute left-0 lg:left-8 top-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 w-full lg:w-2/5 pt-20 lg:pt-0">
+            <div className="hidden lg:block lg:absolute left-0 lg:left-8 top-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 w-full lg:w-2/5">
               <div className="text-black">
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-none mb-4 transform -rotate-2">
+                <h1 className="text-8xl font-black leading-none mb-4 transform -rotate-2">
                   SARTHAK
                 </h1>
-                <div className="text-lg md:text-xl lg:text-2xl font-bold mb-6 md:mb-8 transform rotate-1">
+                <div className="text-2xl font-bold mb-8 transform rotate-1">
                   SOFTWARE DEVELOPMENT ENGINEER
                 </div>
-                <div className="w-20 md:w-28 lg:w-32 h-1 bg-black mb-6 md:mb-8"></div>
-                <p className="text-base md:text-lg font-medium leading-tight">
+                <div className="w-32 h-1 bg-black mb-8"></div>
+                <p className="text-lg font-medium leading-tight">
                   MAKING<br/>
                   LIFE EASIER<br/>
                   WITH TECHNOLOGY
@@ -70,16 +101,16 @@ export default function App() {
             </div>
 
             {/* Right side - White text on black */}
-            <div className="relative lg:absolute right-0 lg:right-8 top-auto lg:top-1/2 lg:transform lg:-translate-y-1/2 w-full lg:w-2/5 text-left lg:text-right pt-20 lg:pt-0">
+            <div className="hidden lg:block lg:absolute right-0 lg:right-8 top-auto lg:top-1/2 lg:transform lg:-translate-y-1/2 w-full lg:w-2/5 text-right">
               <div className="text-white">
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-none mb-4 transform rotate-2">
+                <h1 className="text-8xl font-black leading-none mb-4 transform rotate-2">
                   SRIVASTAVA
                 </h1>
-                <div className="text-lg md:text-xl lg:text-2xl font-bold mb-6 md:mb-8 transform -rotate-1">
+                <div className="text-2xl font-bold mb-8 transform -rotate-1">
                   FULL-STACK DEVELOPER
                 </div>
-                <div className="w-20 md:w-28 lg:w-32 h-1 bg-white mb-6 md:mb-8 lg:ml-auto"></div>
-                <p className="text-base md:text-lg font-medium leading-tight">
+                <div className="w-32 h-1 bg-white mb-8 ml-auto"></div>
+                <p className="text-lg font-medium leading-tight">
                   CLEAN CODE<br/>
                   CAFFEINE LOAD<br/>
                   VICTORY BESTOWED
@@ -255,8 +286,59 @@ export default function App() {
         </div>
       </section>
 
+      {/* Achievements Section - Bold Grid */}
+      <section className="py-16 md:pb-32 px-4 md:px-8 bg-white text-black">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-6xl font-black mb-10 md:mb-20 transform -rotate-1">
+            ACHIEVEMENTS_
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {[
+              {
+                icon: "🏆",
+                title: "SMART INDIA HACKATHON",
+                organization: "WINNER",
+                year: "2024",
+                description: "WINNER IN PROBLEM STATEMENT NUMBER 1691 : ADAPTING COMMAND AREA TO SHIFTING AGRICULTURAL PRACTICES"
+              },
+              {
+                icon: "🏆",
+                title: "MAKEATHON 5",
+                organization: "FIRST RUNNER UP",
+                year: "2023",
+                description: "MLH HACKATHON ORGANISED BY MICROSOFT LEARN STUDENT CHAPTER AT THAPAR. BUILT A SOLUTION AROUND BLOOD BANK SUPPLY."
+              }
+            ].map((achievement, index) => (
+              <div 
+                key={index} 
+                className="group border-4 border-black p-6 md:p-8 transform hover:-rotate-1 transition-all duration-300 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-5xl md:text-6xl">{achievement.icon}</div>
+                  <div className="text-right">
+                    <div className="text-xl md:text-2xl font-black">{achievement.year}</div>
+                    <div className="w-12 md:w-16 h-1 bg-black ml-auto mt-2"></div>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl md:text-2xl font-black mb-2 group-hover:italic transition-all">
+                  {achievement.title}
+                </h3>
+                <div className="text-base md:text-lg font-bold mb-4 opacity-70">
+                  {achievement.organization}
+                </div>
+                <p className="text-sm md:text-base font-medium leading-tight opacity-80">
+                  {achievement.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section - Typography Chaos */}
-      <section className="py-16 md:py-32 px-4 md:px-8 bg-white text-black">
+      <section className="py-16 md:pt-16 px-4 md:px-8 bg-black text-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-6xl font-black mb-10 md:mb-16 transform -rotate-2">
             SKILLS_
@@ -319,7 +401,7 @@ export default function App() {
       </section>
 
       {/* Contact Section - Minimal Bold */}
-      <section className="py-16 md:py-32 px-4 md:px-8 bg-black text-white">
+      <section className="py-16 md:py-32 px-4 md:px-8 bg-white text-black">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-8xl font-black mb-10 md:mb-16">
             LET'S BUILD_
@@ -329,7 +411,7 @@ export default function App() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-lg md:text-xl font-black px-6 md:px-8 py-3 md:py-4 transform hover:rotate-2"
+              className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 text-lg md:text-xl font-black px-6 md:px-8 py-3 md:py-4 transform hover:rotate-2"
               onClick={() => window.open('https://github.com/sarthaksri', '_blank')}
             >
               <Github className="mr-3 md:mr-4 h-5 w-5 md:h-6 md:w-6" />
@@ -338,7 +420,7 @@ export default function App() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-lg md:text-xl font-black px-6 md:px-8 py-3 md:py-4 transform hover:-rotate-2"
+              className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300 text-lg md:text-xl font-black px-6 md:px-8 py-3 md:py-4 transform hover:-rotate-2"
               onClick={() => window.open('https://www.linkedin.com/in/sarthaksri017/', '_blank')}
             >
               <Linkedin className="mr-3 md:mr-4 h-5 w-5 md:h-6 md:w-6" />
