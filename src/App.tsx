@@ -69,7 +69,7 @@ export default function App() {
               <div className="space-y-6">
                 <div className="text-white">
                   <div className="text-sm sm:text-base md:text-lg font-bold mb-4 transform -rotate-1">
-                    FULL-STACK DEVELOPER
+                    SOFTWARE DEVELOPER
                   </div>
                   <div className="w-20 md:w-28 h-1 bg-white mx-auto mb-4"></div>
                   <p className="text-sm sm:text-base font-medium leading-tight">
